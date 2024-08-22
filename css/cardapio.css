@@ -1,0 +1,82 @@
+.cardapio{
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.item-cardapio{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px; 
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.item-cardapio img {
+  max-width: 200px;
+}
+
+.item-cardapio h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.7rem;
+  color: #2e2e2e;
+}
+
+.item-cardapio p + p {
+  margin-top: 2rem;
+}
+
+.descricao-prato {
+  color: #7E7D7D;
+  font-size: 0.875rem ;
+}
+
+.preco {
+  color: #404040;
+  font-size: 1rem;
+}
+
+/* .cardapio > :nth-child(odd):last-child {
+  grid-column: span 2;
+  justify-self: center;
+}  */
+
+@media (max-width: 800px) {
+  .cardapio {
+  grid-template-columns: 1fr;
+  }
+
+  .item-cardapio img {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 600px){
+  .item-cardapio h1{
+    font-size: 1.2rem;
+  }
+
+  .cardapio {
+    gap: 12px;
+  }
+
+  .item-cardapio {
+    gap: 4px;
+  }
+
+}
+
+@media (max-width: 400px){
+  .item-cardapio img {
+    max-width: 120px;
+  }
+
+  .item-cardapio h1{
+    font-size: 1rem;
+  }
+
+}
